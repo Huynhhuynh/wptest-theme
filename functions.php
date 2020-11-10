@@ -24,6 +24,13 @@
  * Block Editor Settings
  */
 
+{
+	/**
+	 * Load Project Pack
+	 */
+	require( get_template_directory() . '/project-pack/functions.php' );
+}
+
 /**
  * Sets up theme defaults and registers support for various WordPress features.
  *
@@ -363,20 +370,8 @@ function wptest_sidebar_registration() {
 			$shared_args,
 			array(
 				'name'        => __( 'Footer #1', 'wptest' ),
-				'id'          => 'sidebar-1',
-				'description' => __( 'Widgets in this area will be displayed in the first column in the footer.', 'wptest' ),
-			)
-		)
-	);
-
-	// Footer #2.
-	register_sidebar(
-		array_merge(
-			$shared_args,
-			array(
-				'name'        => __( 'Footer #2', 'wptest' ),
-				'id'          => 'sidebar-2',
-				'description' => __( 'Widgets in this area will be displayed in the second column in the footer.', 'wptest' ),
+				'id'          => 'footer-1',
+				'description' => __( 'Widgets in this area will be displayed in the footer.', 'wptest' ),
 			)
 		)
 	);

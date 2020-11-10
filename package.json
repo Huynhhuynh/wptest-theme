@@ -42,6 +42,7 @@
 		"map": false
 	},
 	"scripts": {
+		"dev": "sass ./project-pack/src/main.scss:./project-pack/dist/pp.css --style compressed --watch",
 		"build": "npm run build:vendor-prefixes && npm run build:rtl",
 		"build:rtl": "concurrently \"npm run build:rtl-style\" \"npm run build:rtl-esb\" \"npm run build:rtl-esc\"",
 		"build:rtl-style": "rtlcss style.css style-rtl.css",
