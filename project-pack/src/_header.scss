@@ -5,6 +5,30 @@
     justify-content: space-between;
     align-items: center;
     padding: 30px;
+
+    @media( max-width: 375px ) {
+      flex-wrap: wrap;
+
+      > * {
+        width: 100%;
+        text-align: center;
+      }
+    }
+
+    .custom-logo-link {
+
+      @media( max-width: 700px ) {
+        
+        img {
+          max-width: 170px;
+
+          @media( max-width: 375px ) {
+            max-width: 270px;
+            margin: 10px auto
+          }
+        }
+      }
+    }
   }
 }
 
@@ -21,6 +45,10 @@ ul.site-menu {
       color: black;
       text-transform: uppercase;
       text-decoration: none;
+
+      @media( max-width: 530px ) {
+        font-size: 14px;
+      }
     }
   }
 }
